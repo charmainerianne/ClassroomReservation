@@ -1,0 +1,45 @@
+﻿@model CTUClassroomReservation.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/login.css" rel="stylesheet" />
+
+<div class="login-background">
+    <div class="text-overlay">
+        <h2>UNIVERSITY'S</h2>
+        <h1>Classroom<br />Reservation<br />System</h1>
+    </div>
+
+    <div class="login-container">
+        <div class="right-panel">
+            <div class="login-box">
+                <h2>Login Here</h2>
+                <p>Get access to classrooms easily through our system. Quick for searching available rooms too!</p>
+
+                @using (Html.BeginForm())
+                {
+                    <label>Your email</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "e.g. hello@example.com" })
+
+                    <div class="separator"><span>or</span></div>
+
+                    <label>CTU ID number</label>
+                    @Html.TextBoxFor(m => m.CTUID, new { @class = "form-control", placeholder = "1351157" })
+
+                    <label>Password</label>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "********" })
+
+                    <button type="submit">Login</button>
+                }
+
+                <div class="footer">
+                    <small>Forgot Password? <a href="#">Ask help</a></small>
+                </div>
+            </div>
+            <div class="est">EST. 2025</div>
+        </div>
+    </div>
+</div>

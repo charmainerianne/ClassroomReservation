@@ -15,7 +15,6 @@ namespace YourProjectName.Controllers
         {
             if (ModelState.IsValid)
             {
-                // You can add actual login logic here
                 return RedirectToAction("Dashboard");
             }
 
